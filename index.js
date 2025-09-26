@@ -67,7 +67,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
     await fileDoc.save();
 
-    const downloadUrl = `${req.protocol}://${req.get("host")}/download/${fileDoc._id}`;
+    const downloadUrl = `https://upload-image-raycube.vercel.app/download/${fileDoc._id}`;
 
     res.json({ downloadUrl });
   } catch (err) {
